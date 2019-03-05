@@ -9,7 +9,7 @@ The app has 3 modes:
 3. Binary Encryption (Asks for a password with which the text can be encrypted and decrypted)
 
 * Note: the encryption and decryption buttons copies the modified text automatically to your clipboard.
-* Note: the text files created by the app are UTF-8 encoded.
+* Note: the text files created by the app are encoded with UTF-8.
 
 # Dependecies:
   * For the GUI:
