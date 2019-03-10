@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 from simple_encryption import decrypt, encrypt, MorseCode, BinaryEncryption
-import pyperclip, chardet
+import pyperclip, chardet, os
 
 
 
@@ -27,7 +27,7 @@ class Ui_MainWindow(object):
         font.setPointSize(14)
         MainWindow.setFont(font)
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("img\\icon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon.addPixmap(QtGui.QPixmap(os.path.join('img', 'icon.png')), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         MainWindow.setWindowIcon(icon)
         MainWindow.setAutoFillBackground(False)
         MainWindow.setStyleSheet("color: rgb(0, 0, 0);")
@@ -94,7 +94,7 @@ class Ui_MainWindow(object):
         self.encryptPushButton = QtWidgets.QPushButton(self.groupBoxInput)
         self.encryptPushButton.setStyleSheet("color: rgb(0, 0, 0);\n""font: 12pt \"Source Code Pro\";")
         icon1 = QtGui.QIcon()
-        icon1.addPixmap(QtGui.QPixmap("img\\lockIcon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon1.addPixmap(QtGui.QPixmap(os.path.join('img', 'lockIcon.png')), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.encryptPushButton.setIcon(icon1)
         self.encryptPushButton.setIconSize(QtCore.QSize(30, 30))
         self.encryptPushButton.setObjectName("encryptPushButton")
@@ -102,7 +102,7 @@ class Ui_MainWindow(object):
         self.decryptPushButton = QtWidgets.QPushButton(self.groupBoxInput)
         self.decryptPushButton.setStyleSheet("color: rgb(0, 0, 0);\n""font: 12pt \"Source Code Pro\";")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap("img\\unlockIcon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon2.addPixmap(QtGui.QPixmap(os.path.join('img', "unlockIcon.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.decryptPushButton.setIcon(icon2)
         self.decryptPushButton.setIconSize(QtCore.QSize(30, 30))
         self.decryptPushButton.setObjectName("decryptPushButton")
@@ -154,7 +154,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_3.addWidget(self.showTextHere)
         self.verticalLayout_4.addWidget(self.groupBoxDecryption)
         icon3 = QtGui.QIcon()
-        icon3.addPixmap(QtGui.QPixmap("img\\textIcon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon3.addPixmap(QtGui.QPixmap(os.path.join('img', "textIcon.png")), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.tabWidget.addTab(self.textTab, icon3, "")
         self.fileTab = QtWidgets.QWidget()
         self.fileTab.setObjectName("fileTab")
@@ -250,7 +250,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_9.addLayout(self.horizontalLayout_5)
         self.verticalLayout_6.addWidget(self.groupBoxOutput2)
         icon4 = QtGui.QIcon()
-        icon4.addPixmap(QtGui.QPixmap("img\\fileIcon.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon4.addPixmap(QtGui.QPixmap(os.path.join('img', 'fileIcon.png')), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.tabWidget.addTab(self.fileTab, icon4, "")
         self.verticalLayout_2.addWidget(self.tabWidget)
         MainWindow.setCentralWidget(self.centralwidget)
